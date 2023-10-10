@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package Auth;
+option go_package="/Authpd";
+
+service GreetService {
+  rpc Greet (GreetRequest) returns (GreetResponse);
+}
+
+message GreetRequest {
+  string first_name = 1;
+  string last_name = 2;
+}
+
+message GreetResponse {
+  string message = 1;
+}
